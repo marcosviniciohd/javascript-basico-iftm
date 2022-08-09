@@ -8,8 +8,10 @@
 </head>
 <body>
     <script>
-        let nomeCompleto = prompt("Digite seu nome completo");
-        document.write(`${nomeCompleto} seu nome tem ${nomeCompleto.length} caracteres.`);
+       let r = prompt("Informe um valor entre 0 e 255");
+       let g = prompt("Informe um valor entre 0 e 255");
+       let b = prompt("Informe um valor entre 0 e 255");
+       document.write(`<p style='color:rgba(${r},${g},${b})'>Fundamentos de Web Design 2</p>`);
     </script>
 </body>
 </html>

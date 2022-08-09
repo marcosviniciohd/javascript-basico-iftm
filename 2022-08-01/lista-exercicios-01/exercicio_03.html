@@ -11,9 +11,9 @@
         let nome = prompt('Digite seu nome completo');
         let idade = Number(prompt('Digite seua idade'));
         if(idade >= 18){
-            alert(`${nome} você tem idade suficiente para habilitar-se.`);
+            document.write(`${nome} você tem idade suficiente para habilitar-se.`);
         }else{
-            alert(`${nome} você não tem idade suficiente para habilitar-se, falta ${18 - idade} (ano)s para dar início ao processo.`);
+            document.write(`${nome} você não tem idade suficiente para habilitar-se, falta ${18 - idade} (ano)s para dar início ao processo.`);
         }
     </script>
 </body>

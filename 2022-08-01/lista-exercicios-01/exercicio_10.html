@@ -8,8 +8,11 @@
 </head>
 <body>
     <script>
-        let nomeCompleto = prompt("Digite seu nome completo");
-        document.write(`${nomeCompleto} seu nome tem ${nomeCompleto.length} caracteres.`);
+       let nome = prompt("Digite seu nome: ");
+       let numero = prompt("Quantas vezes devemos imprimir seu nome? ");
+       for(i=0; i<numero; i++){
+        document.write(`<p>${nome}</p>`);
+       }
     </script>
 </body>
 </html>
