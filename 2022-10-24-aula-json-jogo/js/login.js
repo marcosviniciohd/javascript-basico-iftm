@@ -18,7 +18,7 @@ function readJSON(user, pwd) {
   // JSON local
   //var file = "../json/users.json";
   //JSON do servidor Gitpages
-  file = 'https://github.com/marcosviniciohd/javascript-basico-iftm/blob/main/2022-10-24-aula-json-jogo/json/users.json';
+  file = 'https://marcosviniciohd.github.io/javascript-basico-iftm/2022-10-24-aula-json-jogo/json/users.json';
   fetch(file)
     .then((response) => response.json())
     .then((content) => checkUser(content, user, pwd))
