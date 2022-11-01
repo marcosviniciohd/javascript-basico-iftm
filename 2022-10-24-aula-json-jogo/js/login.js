@@ -15,8 +15,10 @@ function validate() {
 }
 
 function readJSON(user, pwd) {
-  var file = "../json/users.json";
-  //file = 'https://wilton-filho.github.io/JS-GitHub/aulas/jogo/login/json/users2.json';
+  // JSON local
+  //var file = "../json/users.json";
+  //JSON do servidor Gitpages
+  file = 'https://github.com/marcosviniciohd/javascript-basico-iftm/blob/main/2022-10-24-aula-json-jogo/json/users.json';
   fetch(file)
     .then((response) => response.json())
     .then((content) => checkUser(content, user, pwd))
