@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem Vindo</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function gravaValor(){
+            valor = document.getElementById("txtInfo").value;
+            localStorage.setItem("text", valor);
+            window.open('analisarTxt.html', '_self');
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <label for="texto">Informe um texto qualquer:</label>
+        <input type="text" name="texto" id="txtInfo" value="Instituto Federal do Triângulo Mineiro Minas Gerais meu preferido" class="txtBox"><br>
+        <input type="button" value="Enviar" onclick="gravaValor()">
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 05/09/2022</title>
+  <script>
+    function lerInfo(){
+      valor = ParseFloat(document.getElementById("txtValor").value * 2);
+      document.getElementById("valorRecebido").value = valor;
+    }
+  </script>
+</head>
+<body>
+  <form action="">
+    <label for="valorDigitado">Digite um valor:</label>
+    <input type="text" id="txtValor">
+    <input type="button" value="Mostrar o dobro" onclick="lerInfo()">
+    <label for="">Dobro do valor:</label>
+    <input type="text" id="valorRecebido">
+  </form>
+</body>
+</html>

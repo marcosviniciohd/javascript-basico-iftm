@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var cron1;
+        var contador = 0;
+
+        function iniciar(){
+            //setTimeout(increment, 3000);
+            // setTimeout executa uma função após determinado intervalo de tempo em milisegundos.
+           cron1 = setInterval(incrementar, 1000);
+           statusBtns(true, false, false);
+        }
+
+        function pause(){
+            clearInterval(cron1);
+            statusBtns(false, true, false);
+        }
+
+        function stop(){
+            pause();
+            contador = 0;
+            document.getElementById("cont").innerHTML = contador;
+            statusBtns(false, true, true);
+        }
+
+        function incrementar(){
+            contador++
+            document.getElementById("cont").innerHTML = ++contador;
+        }
+        function statusBtns(statusIniciar, statusPausar, statusParar){
+            document.getElementById("btnIniciar").disabled = statusIniciar;
+            document.getElementById("btnPausar").disabled = statusPausar; 
+            document.getElementById("btnParar").disabled = statusParar; 
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <input type="button" value="Iniciar" onclick="iniciar()" id="btnIniciar"/>
+        <input type="button" value="Pausar" onclick="pause()" disabled id="btnPausar"/>
+        <input type="button" value="Parar" onclick="stop()" id="btnParar" disabled/>
+        
+    </form>
+    <p>Contador: <span id="cont">0</span></p>
+</body>
+</html>

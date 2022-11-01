@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisar Texto</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function analisarTxt(){
+            txt = document.getElementById("txtInfo").value;
+
+            //Obtem as palavras do Texto
+            vetPalavras = txt.split(" ");
+
+            // Total de palavras no texto
+            document.getElementById("txtTotalPal").innerHTML = txt.split(" ").length;
+
+           //4) Palavras iniciadas com a letra M:
+           for(i=0; i<vetPalavras.length; i++) {
+                palavra = vetPalavras[i];
+                if(palavra.charAt(0).toUpperCase() == 'M'){
+                    document.getElementById("txtPalLetraM").value += palavra + " ";
+                }
+           }
+
+           //5) Primeira palavra do teto
+           document.getElementById("firstPalv").value = vetPalavras[0]; 
+
+           //6) Seguda palavra do texto:
+           document.getElementById("secundPalv").value = vetPalavras[1]; 
+           
+           //7) Ultima palavra do texto:
+           document.getElementById("lastPalv").value = palavra.vetPalavras.length -1; 
+
+
+        }
+
+        function getTextHome(){
+            document.getElementById("txtHome").innerHTML = localStorage.getItem("text");
+            
+        }
+    </script>
+</head>
+<body onload="getTextHome()">
+
+    <p class="destaque"> 1) Texto informado pelo usuário na página anterior:</p>
+    <p id="txtHome"></p>
+    <p class="destaque">2) Você gostaria de analisar a informação disponibilizada pelo usuário na página anterior? <select name="" id="">
+        <option value="">Sim</option>
+        <option value="">Não</option>
+    </select></p>
+
+    <p>OBS: Se você respondeu "não" na pergunta anterior (2), por favor informe um novo texto:</p>
+    <form action="">
+        <input type="text" name="" id="txtInfo" class="txtBox" value="Instituto Federal do Triângulo Mineiro Minas Gerais meu preferido"><br>
+        <input type="button" value="Analisar" onclick="analisarTxt()">
+    </form>
+    <hr>
+
+    <form action="">
+        <label class="destaque">3) Quantidade de palavras contidas no texto: <span id="txtTotalPal"></span></label><br><br>
+        <label class="destaque">4) Palavras iniciadas com a letra M:</label>
+        <input type="text" name="" id="txtPalLetraM" value="" disabled ><br><br>
+
+        <label class="destaque">5) Primeira palavra do teto:</label>
+        <input type="text" name="" id="firstPalv" value="Instituto" disabled><br><br>
+
+        <label class="destaque">6) Seguda palavra do texto:</label>
+        <input type="text" name="" id="secundPalv" value="" disabled><br><br>
+        
+        <label class="destaque">7) Ultima palavra do texto:</label>
+        <input type="text" name="" id="lastPalv" value="Preferido" disabled>
+
+        <input type="button" name="" id="" value="Abrir a página do papai noel" onclick="window.open('felizNatal.html', '_self')">
+
+    </form>
+</body>
+</html>

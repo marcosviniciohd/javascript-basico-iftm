@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 05/09/2022</title>
+  <script>
+    function lerInfo(){
+      valor = document.getElementById("txtValor").value;
+      alert(valor);
+    }
+    function escerverInfo(){
+      valor = document.getElementById("txtValor").value = "IFTM";
+    }
+  </script>
+</head>
+<body>
+  <form action="">
+    <label for="txtValor">Valor:</label>
+    <input type="text" id="txtValor" value="10">
+    <input type="button" value="Ler" onclick="lerInfo()">
+    <input type="button" value="Escrever" onclick="escerverInfo()">
+  </form>
+</body>
+</html>

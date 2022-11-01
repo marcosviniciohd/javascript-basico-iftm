@@ -1,0 +1,18 @@
+.destaque{
+    font-weight: bold;
+}
+
+.txtBox{
+    width: 400px;
+}
+.btnPapai{
+    height: 50px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.btnPapai:hover{
+    background-color: red;
+    cursor: pointer;
+}

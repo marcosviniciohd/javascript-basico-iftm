@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão</title>
+    <script>
+        function verificar(){
+            nome = document.getElementById("txtNome").value;
+            if(nome == ""){
+                alert("Nome inválido, digite seu nome!");
+            }
+            else{
+                tamanho = nome.length;
+                alert(`Seu nome possui ${tamanho} de caracteres`);
+            }
+
+        }
+    </script>
+</head>
+<body>
+        <form action="">
+            <label for="">Nome:</label>
+            <input type="text" name="" id="txtNome"><br>
+            <input type="button" value="Validar" onclick="verificar()">
+        </form>
+</body>
+</html>

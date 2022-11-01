@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão</title>
+    <script>
+        function exibirDobro(){
+            valor = document.getElementById("txtValor").value;
+            document.getElementById("valor").innerHTML = valor * 2;
+            document.getElementById("txtValor").value = "";
+
+
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label for="txtValor">Digite um valor:</label>
+        <input type="number" id="txtValor"><br>
+        <input type="button" value="Mostrar o dobro" onclick="exibirDobro()"><br>
+        <label for="">Dobro do valor: <span id="valor"></span></label>
+    </form>
+</body>
+</html>

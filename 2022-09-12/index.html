@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+    <style>
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        form {
+            border: 1px solid black;
+            width: 300px;
+            margin: auto;
+            padding: 10px;
+        }
+
+        button {
+            display: block;
+            width: 200px;
+            margin: auto;
+            margin-top: 10px;
+        }
+
+        input[type="text"] {
+            width: 90%;
+
+        }
+
+        .errorMsg {
+            color: red;
+            font-size: 12px;
+        }
+        span{
+            display: block;
+        }
+    </style>
+    <script>
+
+        /*function validar(){
+            nome = document.getElementById("txtNome");
+            if(nome.value == ""){
+                alert("Preencha o nome!");
+            }else{
+                alert("Nome está preenchido.");
+            }
+        }*/
+        /*function validate(){
+            txtNome = document.getElementById("txtNome");
+            if(!txtNome.value){
+                document.getElementById("errorNome").innerHTML = "Nome inválido, tente novamente!";
+                txtNome.focus();
+
+            }
+
+            if(!txtEndereco.value){
+                document.getElementById("errorEndereco").innerHTML = "Endereço inválido, tenten novamente!";
+                txtEndereco.focus();
+            }
+        }*/
+
+        //Sugestão Wilton, valida todos os inputs
+        /*function validate() {
+            inputs = document.getElementsByTagName("input");
+            for (i = 0; i < inputs.length; i++) {
+                if ((inputs[i].type == "text") && (inputs[i].value == ""))
+                    alert(`${inputs[i].name} está em branco`)
+            }
+        }*/
+
+        //Sugestão Mariana 
+        /*
+            function validate() {
+            const inputs = document.querySelectorAll('.inputs');
+
+            for (let i = 0; i < inputs.length; i++) {
+                if (!inputs[i].value) {
+                    alert(`${inputs[i].id} está em branco`);
+                }
+            }
+        }
+        */
+
+        function limparErrorMsg() {
+            document.getElementById("errorNome").innerHTML = "";
+            document.getElementById("errorEndereco").innerHTML = "";
+        }
+
+        function validate() {
+            tipos = ["TEXT", "NUMBER", "TEL"];
+            inputs = document.getElementsByTagName("input");//5 inputs
+            for (i = 0; i < inputs.length; i++) {
+                if (tipos.includes(inputs[i].type.toUpperCase()) && (inputs[i].value == ""))
+                    document.getElementById(`${inputs[i].name}ERROR`).innerHTML = `${inputs[i].name} está em branco. Tente novamente!`;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <form>
+        <!--
+            <label for="inputName">Nome</label>
+        <input type="text" class="inputs" id="inputName">
+        <span class="error-message" id="errorName"></span>
+
+        -->
+        <label for="txtNome">Nome:</label>
+        <input type="text" name="NOME" id="txtNome">
+        <span class="errorMsg" id="NOMEERROR"></span>
+
+        <label for="txtNome">Endereço:</label>
+        <input type="text" name="ENDERECO" id="txtEndereco">
+        <span id="ENDERECOERROR" class="errorMsg"></span>
+
+        <label for="txtNome">Telefone:</label>
+        <input type="tel" name="TELEFONE" id="txtTel">
+        <span id="TELEFONEERROR" class="errorMsg"></span>
+
+        <label for="txtNome">Idade:</label>
+        <input type="number" name="IDADE" id="txtIdade">
+        <span id="IDADEERROR" class="errorMsg"></span>
+
+        <input type="button" value="Enviar" onclick="validate()">
+
+    </form>
+
+</body>
+
+</html>

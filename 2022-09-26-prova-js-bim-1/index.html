@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso ao sistema</title>
+</head>
+
+<body>
+    <form>
+        <label for="txtUsuario">Usuário:</label><br>
+        <input type="text" id="txtUsuario"><br><br>
+
+        <label for="txtPassword">Senha:</label><br>
+        <input type="password" id="txtPassword"><br><br>
+
+        <input type="button" value="Enviar" onclick="enviar()">
+        <input type="button" value="Limpar" onclick="limpar()">
+
+    </form>
+    <script>
+        nome = document.getElementById("txtUsuario").value = prompt("Qual é o seu nome?");
+        senha = document.getElementById("txtPassword").value;
+
+        if (nome == null || nome == "") {
+            document.getElementById("txtUsuario").value = "Visitante";
+            alert("Visitante seja bem vindo!");
+        } else {
+            alert(`${nome} seja bem vindo!`);
+        }
+
+        //Funções
+        function limpar() {
+            if (nome != null || nome != "" && senha != null || senha != "") {
+                document.getElementById("txtUsuario").value = "";
+                document.getElementById("txtPassword").value = "";
+
+            }
+        }
+
+        function enviar() {
+            if (document.getElementById("txtUsuario").value == "" || document.getElementById("txtUsuario").value == null) {
+                alert("Usuário em branco. Informe um usuário válido");
+                nome.focus();
+            }
+
+            if (document.getElementById("txtPassword").value == "" || document.getElementById("txtPassword").value == null) {
+                alert("Senha em branco. Informe uma senha válida!");
+                senha.focus();
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>
