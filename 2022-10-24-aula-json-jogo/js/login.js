@@ -3,10 +3,10 @@ function validate() {
   pwd = document.getElementById("pwd");
 
   if (!user.value) {
-    alertWifi("Usuário em branco", false, 0, "../img/toupeira.gif", 30);
+    alertWifi("Usuário em branco", false, 0, "https://marcosviniciohd.github.io/javascript-basico-iftm/2022-10-24-aula-json-jogo/img/toupeira.gif", 30);
     user.focus();
   } else if (!pwd.value) {
-    alertWifi("Senha em branco", false, 0, "../img/toupeira.gif", 30);
+    alertWifi("Senha em branco", false, 0, "https://marcosviniciohd.github.io/javascript-basico-iftm/2022-10-24-aula-json-jogo/img/toupeira.gif", 30);
     pwd.focus();
   } else {
     //alertWifi("Login válido Uhuuuuuulllllll", false, 0, "../img/toupeira.gif", 30);
@@ -37,13 +37,13 @@ function checkUser(content, user, pwd) {
     }
   }
 
-  if (achou) alertWifi("Usuário logado!", false, 0, "../img/toupeira.gif", 30);
+  if (achou) alertWifi("Usuário logado!", false, 0, "https://marcosviniciohd.github.io/javascript-basico-iftm/2022-10-24-aula-json-jogo/img/toupeira.gif", 30);
   else
     alertWifi(
       "Usuário ou senha inválidos, tente novamente!",
       false,
       0,
-      "../img/toupeira.gif",
+      "https://marcosviniciohd.github.io/javascript-basico-iftm/2022-10-24-aula-json-jogo/img/toupeira.gif",
       30
     );
 }
